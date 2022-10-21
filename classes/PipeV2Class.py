@@ -7,7 +7,7 @@ class Pipe:
     self.name = "Pipe"
     self.colorP = (0, 128, 0)
     self.widthP = 50
-    self.heightP = random.randint(100, 500)
+    self.heightP = random.randint(120, 500)
     self.downTry = self.heightP+120
     self.posX = 600
     self.posY = 0

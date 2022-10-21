@@ -6,7 +6,7 @@ import random
 from classes.PlayerV2Class import Player
 from classes.PipeV2Class import Pipe
 
-# init set up for the window
+# init set up for the window and sound
 pygame.init()
 pygame.display.set_caption("Flappy bird")
 screen = pygame.display.set_mode((600, 750))
@@ -14,9 +14,6 @@ screen = pygame.display.set_mode((600, 750))
 # set up loop
 loop = True
 blue = (135,206,250)
-
-# set up background music
-music = pygame.mixer.music('')
 
 # set up flappy
 player = Player()
@@ -32,6 +29,11 @@ font = pygame.font.Font(None, 36)
 while loop:
 
   screen.fill((blue))
+ 
+# set up background music
+  # pygame.mixer.init()
+  # pygame.mixer.music.load("Undertale_Papyrus_Theme_Song_Bonetrousle.mp3")
+  # pygame.mixer.play()
 
   for e in pygame.event.get():
     if e.type == pygame.QUIT:
@@ -59,7 +61,7 @@ while loop:
   if pipe.posX <= -5:
     pipe.posX = 600
     pipe.heightP = random.randint(100, 500)
-    pipe.downTry = pipe.heightP+random.randint(120, 250)
+    pipe.downTry = pipe.heightP+random.randint(80, 250)
 
 # create collider for pipes
   colliderTopP = pipe.colliderTopP(widthP=50)
