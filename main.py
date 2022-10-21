@@ -32,8 +32,8 @@ while loop:
  
 # set up background music
   # pygame.mixer.init()
-  # pygame.mixer.music.load("Undertale_Papyrus_Theme_Song_Bonetrousle.mp3")
-  # pygame.mixer.play()
+  # sound = pygame.mixer.Sound("/Undertale_Papyrus_Theme_Song_Bonetrousle.mp3")
+  # sound.play()
 
   for e in pygame.event.get():
     if e.type == pygame.QUIT:
@@ -80,7 +80,7 @@ while loop:
 
 # Draw pipes and flappy
   pipe.Draw(screen, colorP=(135, 206, 250), widthP=50)
-  player.Draw(screen, colorF=(135, 206, 250), widthF=50, heightF=30)
+  player.Draw(screen, colorF=(135, 206,  250), widthF=50, heightF=30)
 
 # Display score on the screen
   txt = font.render('Score : '+str(PipePass), 1, (0, 0, 0))
